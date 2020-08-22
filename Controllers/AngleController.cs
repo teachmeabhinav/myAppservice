@@ -18,7 +18,7 @@ namespace SLB_Clock.Controllers
         {
             if (String.IsNullOrWhiteSpace(time) || !time.Contains(timeSeparator))
             {
-                return BadRequest();
+                return BadRequest("Input should be in format 00:00");
             }
             try
             {
