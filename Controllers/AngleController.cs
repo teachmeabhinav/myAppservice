@@ -7,24 +7,35 @@ namespace SLB_Clock.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-   
+
     public class AngleController : ControllerBase
     {
- 
+        string timeSeparator = ":";
+
         // POST: api/Angle
         [HttpPost]
-        public IActionResult Post([FromBody] ClockModel model)
+        public IActionResult Post([FromBody] string time)
         {
-            if (model == null)
+            if (String.IsNullOrWhiteSpace(time) || !time.Contains(timeSeparator))
             {
                 return BadRequest();
             }
             try
             {
-               var angle = Util.ConvertToAngle(model);
+                var splittedValues = time.Split(timeSeparator);
+                var timeModel = new ClockModel
+                {
+                    Hour = Convert.ToInt32(splittedValues[0]),
+                    Min = Convert.ToInt32(splittedValues[1])
+                };
+                var angle = Util.ConvertToAngle(timeModel);
 
-               //Todo Save
-               return Ok($"Angle between {model.Hour} h and {model.Min} m is {angle} degree.");
+                //Todo Save
+                return Ok(new
+                {
+                    Message = $"Angle between {timeModel.Hour} h and {timeModel.Min} m is {angle} degree.",
+                    Angel = angle
+                });
 
             }
             catch (Exception ex)
@@ -36,6 +47,6 @@ namespace SLB_Clock.Controllers
 
         }
 
-       
+
     }
 }
