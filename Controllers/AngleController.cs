@@ -1,24 +1,43 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using SLB_Clock.Business;
 using SLB_Clock.Models.DomainModel;
-using SLB_Clock.Utility;
 using System;
+using System.Threading.Tasks;
 
 namespace SLB_Clock.Controllers
 {
+
+    /// <summary>
+    /// Sample Conteroller for Testing purpose
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-
     public class AngleController : ControllerBase
     {
         string timeSeparator = ":";
+        private readonly IClockBusiness _ClockBusiness;
+        private readonly ILogger _logger;
 
-        // POST: api/Angle
+        public AngleController(IClockBusiness ClockBusiness, ILogger<AngleController> logger)
+        {
+            _ClockBusiness = ClockBusiness ?? throw new ArgumentNullException(nameof(ClockBusiness));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
+
+        /// <summary>
+        /// Concert Time to Angel
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns>Object of angle and message</returns>
         [HttpPost]
-        public IActionResult Post([FromBody] string time)
+        public async Task<IActionResult> Post([FromBody] string time)
         {
             if (String.IsNullOrWhiteSpace(time) || !time.Contains(timeSeparator))
             {
-                return BadRequest("Input should be in format 00:00");
+                var message = "Input should be in format 00:00";
+                _logger.LogDebug(message);
+                return BadRequest(message);
             }
             try
             {
@@ -28,9 +47,7 @@ namespace SLB_Clock.Controllers
                     Hour = Convert.ToInt32(splittedValues[0]),
                     Min = Convert.ToInt32(splittedValues[1])
                 };
-                var angle = Util.ConvertToAngle(timeModel);
-
-                //Todo Save
+                var angle = await _ClockBusiness.GetAngle(timeModel);              
                 return Ok(new
                 {
                     Message = $"Angle between {timeModel.Hour} h and {timeModel.Min} m is {angle} degree.",
@@ -40,6 +57,7 @@ namespace SLB_Clock.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogDebug(ex.Message);
                 return BadRequest(ex.Message);
             }
 

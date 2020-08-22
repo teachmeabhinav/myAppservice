@@ -1,25 +1,17 @@
-﻿using SLB_Clock.Models.DomainModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SLB_Clock.Models.DomainModel;
 
-namespace SLB_Clock.Utility
+namespace SLB_Clock.Business
 {
-    /// <summary>
-    /// Util Class
-    /// </summary>
-    public static class Util
+    public class ClockBusiness : IClockBusiness
     {
-        /// <summary>
-        /// Convert hour and min in to angle
-        /// </summary>
-        /// <param name="clockModel"></param>
-        /// <returns></returns>
-        public static int ConvertToAngle(ClockModel clockModel)
+        public async Task<int> GetAngle(ClockModel ClockModel)
         {
-            var hour = clockModel.Hour;
-            var min = clockModel.Min;
+            var hour = ClockModel.Hour;
+            var min = ClockModel.Min;
             // Validation
             if (hour < 0 || min < 0 || hour > 12 || min > 60)
                 throw new Exception("Invalid Input");
