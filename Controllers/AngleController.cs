@@ -34,7 +34,7 @@ namespace SLB_Clock.Controllers
                 return Ok(new
                 {
                     Message = $"Angle between {timeModel.Hour} h and {timeModel.Min} m is {angle} degree.",
-                    Angel = angle
+                    Angle = angle
                 });
 
             }
