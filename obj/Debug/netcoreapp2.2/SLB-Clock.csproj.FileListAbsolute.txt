@@ -1,0 +1,15 @@
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.csproj.CoreCompileInputs.cache
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.AssemblyInfoInputs.cache
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.AssemblyInfo.cs
+D:\Project\My projects\SLB-Clock\bin\Debug\netcoreapp2.2\SLB-Clock.deps.json
+D:\Project\My projects\SLB-Clock\bin\Debug\netcoreapp2.2\SLB-Clock.runtimeconfig.json
+D:\Project\My projects\SLB-Clock\bin\Debug\netcoreapp2.2\SLB-Clock.runtimeconfig.dev.json
+D:\Project\My projects\SLB-Clock\bin\Debug\netcoreapp2.2\SLB-Clock.dll
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.csprojAssemblyReference.cache
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.RazorAssemblyInfo.cache
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.RazorAssemblyInfo.cs
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.RazorTargetAssemblyInfo.cache
+D:\Project\My projects\SLB-Clock\bin\Debug\netcoreapp2.2\SLB-Clock.pdb
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.dll
+D:\Project\My projects\SLB-Clock\obj\Debug\netcoreapp2.2\SLB-Clock.pdb
+D:\Project\My projects\SLB-Clock\bin\Debug\netcoreapp2.2\SLB-Clock.xml
