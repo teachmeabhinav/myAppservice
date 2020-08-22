@@ -22,8 +22,9 @@ namespace SLB_Clock.Controllers
             try
             {
                var angle = Util.ConvertToAngle(model);
+
                //Todo Save
-               return Ok(angle);
+               return Ok($"Angle between {model.Hour} h and {model.Min} m is {angle} degree.");
 
             }
             catch (Exception ex)
