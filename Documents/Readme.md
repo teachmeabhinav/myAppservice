@@ -23,6 +23,10 @@ Design:
 	c. Service will listen to that event by subscribing the topic using consumer group. 
 	d. service take the time as input calculate the angle and save it to the database.
 
+Infrastructure:
+1. Team will use Intrastrucre as a code, No manual infrastructure get created.
+2. Tool may be used Terraform/puppet/Chef.
+
 CI/CD: 
 1. We will use CI using Git 
 2. For branching we will use Git flow
