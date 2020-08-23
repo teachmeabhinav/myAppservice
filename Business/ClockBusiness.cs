@@ -6,8 +6,16 @@ using SLB_Clock.Models.DomainModel;
 
 namespace SLB_Clock.Business
 {
+    /// <summary>
+    /// ClockBusiness
+    /// </summary>
     public class ClockBusiness : IClockBusiness
     {
+        /// <summary>
+        /// Get Angle
+        /// </summary>
+        /// <param name="ClockModel"></param>
+        /// <returns></returns>
         public async Task<int> GetAngle(ClockModel ClockModel)
         {
             var hour = ClockModel.Hour;

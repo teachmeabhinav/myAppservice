@@ -26,7 +26,7 @@ namespace SLB_Clock.Controllers
         }
 
         /// <summary>
-        /// Concert Time to Angel
+        /// Convert Time to Angel
         /// </summary>
         /// <param name="time"></param>
         /// <returns>Object of angle and message</returns>
