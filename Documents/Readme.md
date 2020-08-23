@@ -1,10 +1,10 @@
-Assumptions: 
+**Assumptions:**
 1. Edge devices are configured 
 2. Azure Iot hub is configured 
 3. Eventhub namespace and Lib is in place
-=====================================================
 
-TODO List:
+
+**TODO List:**
 1. Team need to add eventhub library service in startup.cs @
 line 25 .
 2. Team need to add subscribe to an event in startup.cs @ line 55 .
@@ -13,9 +13,7 @@ line 25 .
 5. Team need to add database call for saving data in database by following the Datamodel
 given.
 
-=====================================================
-
-Design: 
+**Design:**
 1. Design diagram is @ Documents/Clock to Angle-Design 
 2. Design as follow 
 	a. IOT-Hub  is connect to edge device which are in clock . 
@@ -23,11 +21,11 @@ Design:
 	c. Service will listen to that event by subscribing the topic using consumer group. 
 	d. service take the time as input calculate the angle and save it to the database.
 
-Infrastructure:
+**Infrastructure:**
 1. Team will use Intrastrucre as a code, No manual infrastructure get created.
 2. Tool may be used Terraform/puppet/Chef.
 
-CI/CD: 
+**CI/CD:** 
 1. We will use CI using Git 
 2. For branching we will use Git flow
 3. We use Git action for CD to update web app when ever there is a PR merge in the master.
