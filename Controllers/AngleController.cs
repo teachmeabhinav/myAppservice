@@ -26,7 +26,7 @@ namespace SLB_Clock.Controllers
         }
 
         /// <summary>
-        /// Convert Time to Angel
+        /// Convert Time to Angel Demo
         /// </summary>
         /// <param name="time"></param>
         /// <returns>Object of angle and message</returns>

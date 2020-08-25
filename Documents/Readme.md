@@ -28,7 +28,7 @@ given.
 **CI/CD:** 
 1. We will use CI using Git 
 2. For branching we will use Git flow
-3. We use Git action for CD to update web app when ever there is a PR merge in the master.
+3. We use Git workflow action for CD to update web app when ever there is a PR merge in the master.
 4. Direct merge will be disabled only PR merged will be allowed after review with Sr persons.
 
 
